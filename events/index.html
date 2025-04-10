@@ -1,6 +1,3 @@
-# Updated HTML for Events card with white SVG icons for contact info
-
-events_with_icons_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +9,11 @@ events_with_icons_html = """
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: sans-serif;
@@ -19,8 +21,9 @@ events_with_icons_html = """
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
     }
+
     .card {
       background: #000;
       color: white;
@@ -32,30 +35,36 @@ events_with_icons_html = """
       text-align: center;
       animation: fadeIn 1s ease-out;
     }
+
     .logo {
       width: 50px;
       margin-bottom: 1rem;
     }
+
     .photo {
       width: 100%;
       border-radius: 1rem;
       margin-bottom: 1rem;
     }
+
     .name {
       font-size: 1.5rem;
       font-weight: bold;
       margin-bottom: 0.25rem;
     }
+
     .tagline {
       font-size: 0.9rem;
       font-style: italic;
       color: #ccc;
       margin-bottom: 0.75rem;
     }
+
     .title {
       font-size: 1rem;
       margin-bottom: 0.75rem;
     }
+
     .contact a {
       display: flex;
       align-items: center;
@@ -65,11 +74,13 @@ events_with_icons_html = """
       color: #ffffff;
       text-decoration: none;
     }
+
     .contact svg {
       width: 18px;
       height: 18px;
       fill: white;
     }
+
     .button {
       display: inline-block;
       margin-top: 1.5rem;
@@ -111,10 +122,3 @@ events_with_icons_html = """
   </div>
 </body>
 </html>
-"""
-
-# Save updated HTML
-events_svg_path = Path("/mnt/data/index.html")
-events_svg_path.write_text(events_with_icons_html)
-
-events_svg_path.name
