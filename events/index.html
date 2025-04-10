@@ -1,6 +1,6 @@
-# Corrected HTML for the Sales & Events card with proper silver gradient text and no background overflow
+# Fully rebuilt version of the Events card with proper silver gradient and no layout issues
 
-events_silver_fixed_html = """
+html_final_fixed = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +8,24 @@ events_silver_fixed_html = """
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sales & Events Team | Mercedes-Benz World</title>
   <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     * {
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #1a1a1a;
       font-family: sans-serif;
-      background: #1a1a1a;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      overflow: hidden;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .card {
@@ -135,8 +135,8 @@ events_silver_fixed_html = """
 </html>
 """
 
-# Save fixed HTML
-fixed_html_path = Path("/mnt/data/index.html")
-fixed_html_path.write_text(events_silver_fixed_html)
+# Save rebuilt fixed HTML
+final_fixed_path = Path("/mnt/data/index.html")
+final_fixed_path.write_text(html_final_fixed)
 
-fixed_html_path.name
+final_fixed_path.name
