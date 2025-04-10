@@ -1,6 +1,6 @@
-# Updated HTML with silver text effect using CSS gradients
+# Corrected HTML for the Sales & Events card with proper silver gradient text and no background overflow
 
-events_silver_html = """
+events_silver_fixed_html = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +25,7 @@ events_silver_html = """
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      overflow: hidden;
     }
 
     .card {
@@ -54,6 +55,8 @@ events_silver_html = """
       background: linear-gradient(120deg, #ccc, #eee, #aaa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
     .name {
@@ -65,7 +68,6 @@ events_silver_html = """
     .tagline {
       font-size: 0.9rem;
       font-style: italic;
-      color: #ccc;
       margin-bottom: 0.75rem;
     }
 
@@ -133,8 +135,8 @@ events_silver_html = """
 </html>
 """
 
-# Save the silver version HTML
-silver_path = Path("/mnt/data/index.html")
-silver_path.write_text(events_silver_html)
+# Save fixed HTML
+fixed_html_path = Path("/mnt/data/index.html")
+fixed_html_path.write_text(events_silver_fixed_html)
 
-silver_path.name
+fixed_html_path.name
